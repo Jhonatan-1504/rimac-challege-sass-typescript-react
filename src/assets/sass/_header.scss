@@ -1,0 +1,43 @@
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  width: 80%;
+  margin: 0 auto;
+  transition: all .3s ease;
+
+  @include max-md{
+    width: 90%;
+  }
+
+  &--right{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    gap: 61px;
+    transition: all .3s ease;
+
+    &--hidden{
+      display: block;
+      @include max-md{
+        display: none;
+      }
+    }
+
+    &--with-icon{
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 700;
+      gap: 8px;
+
+      @include max-md{
+        font-size: 16px;
+      }
+    }
+  }
+}

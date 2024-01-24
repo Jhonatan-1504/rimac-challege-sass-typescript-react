@@ -1,0 +1,44 @@
+// # input
+
+.input-container {
+  --input-gray: #5e6488;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--input-gray);
+  border-radius: 8px;
+  font-weight: 400;
+
+  & .prepend{
+    padding: 16px;
+  }
+
+  & .control{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+
+    & input{
+      border: none;
+      outline: none;
+      height: 24px;
+      font-size: 16px;
+      line-height: 24px;
+      &:focus, &:active{
+        border: none;
+      }
+    }
+
+    & .label{
+      color: var(--input-gray);
+      font-size: 12px ;
+      line-height: 16px;
+    }
+  }
+
+  & div:nth-child(2){
+    border-left: 1px solid;
+    border-color: var(--input-gray);
+  }
+}
+
+// # group

@@ -1,0 +1,19 @@
+.hidden{
+  display: block;
+
+  & &--flex{
+    display: flex;
+  }
+
+  &.media-query__max{
+    @include max-md{
+      display: none;
+    }
+  }
+
+  &.media-query__min{
+    @include min-md{
+      display: none;
+    }
+  }
+}

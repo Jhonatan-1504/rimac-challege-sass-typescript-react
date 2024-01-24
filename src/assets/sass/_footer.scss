@@ -1,0 +1,33 @@
+.footer {
+  background-color: #03050f;
+  color: #fff;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 106px;
+    margin: 0 auto;
+    transition: all .3s ease;
+
+    @include max-md{
+      flex-direction: column;
+      padding: 26px 0;
+      height: 152px;
+    }
+
+    &--max-md{
+      display: none;
+      @include max-md{
+        display: block;
+      }
+    }
+
+    &--normal{
+      @include max-md{
+        display: none;
+      }
+    }
+  }
+}

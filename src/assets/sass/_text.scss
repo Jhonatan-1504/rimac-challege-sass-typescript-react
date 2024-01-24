@@ -1,0 +1,11 @@
+.text{
+  --text-size:0;
+  --text-line:0;
+  --text-weight:0;
+  
+  font-size: var(--text-size);
+  line-height: var(--text-line);
+  font-weight: var(--text-weight);
+
+  letter-spacing: .2px;
+}

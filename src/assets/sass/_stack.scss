@@ -1,0 +1,8 @@
+.stack{
+  --stack-gap:0;
+  --stack-direction:"row";
+  display: flex;
+  flex-direction: var(--stack-direction);
+
+  gap: var(--stack-gap);
+}

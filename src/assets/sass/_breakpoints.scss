@@ -1,0 +1,19 @@
+@mixin breakpoint-max($bp:0) {
+  @media (max-width:$bp) {
+    @content;
+  }
+}
+
+// max-md
+
+@mixin max-md() {
+  @media (max-width:720px) {
+    @content;
+  }
+}
+
+@mixin min-md() {
+  @media (min-width:720px) {
+    @content;
+  }
+}

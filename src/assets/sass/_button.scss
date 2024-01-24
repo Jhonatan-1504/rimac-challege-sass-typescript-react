@@ -1,0 +1,30 @@
+button{
+  outline: none;
+  border: none;
+
+  &:focus, &:active{
+    border: none;
+    outline: none;
+  }
+}
+
+.button{
+  background-color: #03050F;
+  color: #ffff;
+  
+  line-height: 20px;
+  font-size: 18px;
+  text-align: center;
+
+  border-radius: 40px;
+  width: 100%;
+  padding: 18px 40px 18px 40px;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+
+  &:active{
+    scale: .9;
+  }
+}

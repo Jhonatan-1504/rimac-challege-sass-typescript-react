@@ -1,0 +1,15 @@
+.mt-16{
+  margin-top: 16px;
+}
+
+.mt-116{
+  margin-top: 116px;
+}
+
+.max-md{
+  &-mt-16{
+    @include max-md{
+      margin-top: 16px;
+    }
+  }
+}
