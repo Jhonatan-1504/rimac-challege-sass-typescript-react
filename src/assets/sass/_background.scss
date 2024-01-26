@@ -1,0 +1,38 @@
+.blur-container{
+  // overflow: hidden;
+
+  &::before,&::after{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 500px;
+    filter: blur(65px);
+    z-index: -1;
+  }
+
+  &::before{
+    background-color: #82f7f1;
+    right: 0;
+    top: 70px;
+
+    @include max-md{
+      width: 150px;
+      height: 150px;
+      top: -150px;
+      right: -50px;
+    }
+  }
+
+  &::after{
+    background-color: #d472ff;
+    left: -15px;
+    bottom: 0;
+
+    @include max-md{
+      width: 150px;
+      height: 150px;
+      left: -50px;
+      bottom: -150px;
+    }
+  }
+}

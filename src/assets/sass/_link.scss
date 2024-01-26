@@ -1,4 +1,6 @@
 .link{
+  --link-size:0;
+  font-size: var(--link-size);
   color: #03050F;
   outline: none;
   text-decoration: underline;

@@ -1,0 +1,23 @@
+.back{
+  width: 65%;
+  margin: 24px auto;
+  transition: all .3s ease;
+
+  & a{
+    outline: none;
+    text-decoration: none;
+  }
+
+  &.md-80{
+    @include max-md{
+      width: 85%;
+    }
+  }
+
+  // Sirve para el resumen
+  & .back--title{
+    @include max-md{
+      --text-size: 32px !important;
+    }
+  }
+}

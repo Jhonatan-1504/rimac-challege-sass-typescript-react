@@ -1,3 +1,5 @@
+@import "breakpoints";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -8,5 +10,17 @@
   box-sizing: border-box;
 }
 
-@import "breakpoints", "helpers", "hidden", "tag", "stack", "home", "header", "footer",
-  "container","inputs","checkbox","link","button","text","divider";
+#root {
+  min-height: 100vh;
+  padding-bottom: 120px;
+  position: relative;
+  overflow: hidden;
+
+  @include max-md{
+    padding-bottom: 150px;
+  }
+}
+
+@import "helpers", "hidden", "tag", "stack", "home", "header", "footer",
+  "container", "inputs", "checkbox", "link", "button", "text", "divider",
+  "inner_select", "stepper", "back", "banner", "card", "plans", "progress","background";

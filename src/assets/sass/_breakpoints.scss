@@ -17,3 +17,17 @@
     @content;
   }
 }
+
+// max-xl
+
+@mixin max-xl{
+  @media (max-width:1550px) {
+    @content;
+  }
+}
+
+@mixin min-xl() {
+  @media (min-width:1550px) {
+    @content;
+  }
+}

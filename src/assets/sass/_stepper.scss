@@ -1,0 +1,26 @@
+.stepper{
+  padding: 16px 0;
+  background-color: #EDEFFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  & .stepper--number{
+    color: #7981B2;
+    border: 1px solid #7981B2;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+    
+    &.primary{
+      border: none;
+      background-color: #4F4FFF;
+      color: #fff;
+    }
+  }
+}

@@ -9,7 +9,8 @@ button{
 }
 
 .button{
-  background-color: #03050F;
+  --button-bg: #03050F;
+  background-color: var(--button-bg);
   color: #ffff;
   
   line-height: 20px;

@@ -5,14 +5,28 @@
     display: flex;
   }
 
-  &.media-query__max{
+  &.media-query__max__md{
     @include max-md{
       display: none;
     }
   }
 
-  &.media-query__min{
+  &.media-query__min__md{
     @include min-md{
+      display: none;
+    }
+  }
+
+  /** XL */
+
+  &.media-query__max__xl{
+    @include max-xl{
+      display: none;
+    }
+  }
+
+  &.media-query__min__xl{
+    @include min-xl{
       display: none;
     }
   }

@@ -8,4 +8,8 @@
   font-weight: var(--text-weight);
 
   letter-spacing: .2px;
+
+  &.line-through{
+    text-decoration: line-through;
+  }
 }

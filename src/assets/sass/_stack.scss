@@ -1,8 +1,30 @@
-.stack{
-  --stack-gap:0;
-  --stack-direction:"row";
+.stack {
+  --stack-gap: 0;
+  --stack-direction: row;
+  --stack-justify: left;
+  --stack-align: left;
   display: flex;
   flex-direction: var(--stack-direction);
+  justify-content: var(--stack-justify);
+  align-items: var(--stack-align);
 
   gap: var(--stack-gap);
+
+  &.md--column {
+    @include max-md {
+      --stack-direction: column !important;
+    }
+  }
+
+  &.md--row {
+    @include max-md {
+      --stack-direction: row !important;
+    }
+  }
+
+  &.md-align-center{
+    @include max-md {
+      --stack-align: center !important;
+    } 
+  }
 }

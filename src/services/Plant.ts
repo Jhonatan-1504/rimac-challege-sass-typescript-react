@@ -1,6 +1,6 @@
 import axiosClient from '@/axiosClient';
 
-type Plan = {
+export type Plan = {
   name: string;
   price: number;
   description: string[];

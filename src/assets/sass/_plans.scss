@@ -1,0 +1,38 @@
+.plans{
+  width: 65%;
+  margin: 0 auto;
+
+  @include max-md{
+    margin-top: 32px;
+    width: 80%;
+  }
+
+  & .card{
+    padding: 68px 32px 48px 32px;
+    position: relative;
+    box-sizing: border-box;
+
+    & .plans__item--ul{
+      margin-left: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+    }
+
+    & .plans__item--button{
+      position: absolute;
+      bottom: 0;
+      left: 32px;
+      padding: 14px 32px 14px 32px;
+      width: 80%;
+      margin: 32px 0;
+    }
+
+  }
+  
+  & img{
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,38 @@
+progress{
+  --progress-bar-color: #cfd8dc;
+  --progress-value-color: #4F4FFF;
+  --progress-empty-color-h: 4.1;
+  --progress-empty-color-s: 89.6;
+  --progress-empty-color-l: 58.4;
+  --progress-filled-color-h: 122.4;
+  --progress-filled-color-s: 39.4;
+  --progress-filled-color-l: 49.2;
+  width: 200px;
+}
+
+progress[value] {
+  --border-radius: 10px;
+  --progress-value: var(--value);
+  display: block;
+  position: relative;
+  appearance: none;
+  height: 6px;
+  border: 0;
+  border-radius: var(--border-radius);
+  --progress-value-string: counter(progress) '%';
+  --progress-max-decimal: calc(var(--value, 0) / var(--max, 0));
+  --progress-value-decimal: calc(var(--progress-value, 0) / var(--max, 0));
+  --progress-value-percent: calc(var(--progress-value-decimal) * 100%);
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--progress-bar-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+progress[value]::-webkit-progress-value {
+  width: var(--progress-value-percent) !important;
+  background-color: var(--progress-value-color);
+  border-radius: var(--border-radius);
+}

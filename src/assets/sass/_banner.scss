@@ -1,0 +1,16 @@
+.banner--plans{
+  width: 554px;
+
+  & div .banner--title{
+    --text-size: 40px;
+
+    @include max-md{
+      --text-size: 28px !important;
+      --text-line: 36px !important;
+    }
+  }
+
+  @include max-md{
+    width: 336px;
+  }
+}

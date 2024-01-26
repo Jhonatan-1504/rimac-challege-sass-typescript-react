@@ -1,27 +1,49 @@
 import { useMemo, type ReactNode, CSSProperties } from "react";
 
+type TextStyles = {
+  "--text-size": string;
+  "--text-weight": string;
+  "--text-line": string;
+  color?: string;
+  align?:string;
+};
+
 type PropsText = {
   children: ReactNode;
-  // is?: "div" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
   size?: number;
   weight?: number;
   line?: number;
   className?: string;
+  color?: string;
+  align?:"left"|"center"|"right";
 };
 
 export default function Text({
   children,
-  size = 16, weight = 400, line = 24,
+  size = 16,
+  weight = 400,
+  line = 24,
   className = "",
+  color = "",
+  align = "left"
 }: PropsText) {
-  
   const style: CSSProperties = useMemo(() => {
-    return {
+    const props: TextStyles = {
       "--text-size": `${size}px`,
       "--text-weight": `${weight}`,
       "--text-line": `${line}px`,
-    } as CSSProperties;
-  }, [size, weight, line]);
+    };
+
+    if (color) {
+      props.color = color;
+    }
+
+    if(align){
+      props.align = align
+    }
+
+    return props as CSSProperties;
+  }, [size, weight, line, color,align]);
 
   return (
     <div style={style} className={"text " + className}>

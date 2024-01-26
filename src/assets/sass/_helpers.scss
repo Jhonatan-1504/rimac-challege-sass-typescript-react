@@ -1,3 +1,7 @@
+.mt-8{
+  margin-top: 8px;
+}
+
 .mt-16{
   margin-top: 16px;
 }
@@ -11,5 +15,15 @@
     @include max-md{
       margin-top: 16px;
     }
+  }
+}
+
+.text-center{
+  text-align: center;
+}
+
+.md-text-left{  
+  @include max-md{
+    text-align: left;
   }
 }

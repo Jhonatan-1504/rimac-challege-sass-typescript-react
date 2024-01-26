@@ -5,10 +5,11 @@ type OptionDisplay = "normal" | "flex";
 type PropsHidden = {
   children: ReactNode;
   display?: OptionDisplay;
-  query?: "max" | "min"
+  query?: "max" | "min";
+  media?: "md" | "xl";
 };
 
-export default function Hidden({ children, display = "normal", query = "max" }: PropsHidden) {
+export default function Hidden({ children, display = "normal", query = "max", media = "md" }: PropsHidden) {
 
   const className = useMemo(() => {
     let classes = "hidden";
@@ -17,12 +18,12 @@ export default function Hidden({ children, display = "normal", query = "max" }: 
       classes += " hidden--" + display;
     }
 
-    if(query){
-      classes += " media-query__" + query
+    if(query && media){
+      classes += " media-query__" + query + "__" + media
     }
   
     return classes;
-  }, [display, query]);
+  }, [display, query, media]);
 
   return <div className={className}>{children}</div>;
 }
